@@ -1,0 +1,1 @@
+Website for ECCV 2024 workshop "Foundation Models for 3D Humans"

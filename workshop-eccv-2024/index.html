@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Foundation Models for 3D Humans</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="ECCV 2024 Workshop">
-    <meta name="keywords" content="bootstrap, business, creative">
-    <meta name="author" content="Createx Studio">
-	  
-	  
-    <link rel="icon" href="./assets/img/logo.png">
-	  
-<!--     <meta property="og:image" content="https://fnzhan.github.io/neural-gauge-fields/img/ngf_logo.png"> -->
+    <meta name="description" content="ECCV 2024 Workshop" />
+    <meta name="keywords" content="bootstrap, business, creative" />
+    <meta name="author" content="Createx Studio" />
+
+    <link rel="icon" href="./assets/img/logo.png" />
+
+    <!--     <meta property="og:image" content="https://fnzhan.github.io/neural-gauge-fields/img/ngf_logo.png"> -->
 
     <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Favicon and Touch Icons -->
-    <link rel="shortcut icon" href="favicon.ico">
-    <meta name="msapplication-TileColor" content="#080032">
-    <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="msapplication-TileColor" content="#080032" />
+    <meta
+      name="msapplication-config"
+      content="./assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="./assets/vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="./assets/vendor/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" media="screen" href="./assets/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="./assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="./assets/vendor/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="./assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+    />
 
     <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="./assets/css/theme.min.css">
+    <link rel="stylesheet" media="screen" href="./assets/css/theme.min.css" />
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!-- Page loading styles -->
     <style>
@@ -55,8 +72,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
         background-color: #fff;
         opacity: 0;
         visibility: hidden;
@@ -77,8 +94,8 @@
         text-align: center;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
         opacity: 0;
       }
       .page-loading.active > .page-loading-inner {
@@ -92,22 +109,22 @@
       }
       .dark-mode .page-loading-inner > span {
         color: #fff;
-        opacity: .6;
+        opacity: 0.6;
       }
       .page-spinner {
         display: inline-block;
         width: 2.75rem;
         height: 2.75rem;
-        margin-bottom: .75rem;
+        margin-bottom: 0.75rem;
         vertical-align: text-bottom;
-        border: .15em solid #b4b7c9;
+        border: 0.15em solid #b4b7c9;
         border-right-color: transparent;
         border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
       }
       .dark-mode .page-spinner {
-        border-color: rgba(255,255,255,.4);
+        border-color: rgba(255, 255, 255, 0.4);
         border-right-color: transparent;
       }
       @-webkit-keyframes spinner {
@@ -129,16 +146,16 @@
       }
 
       #tracks ul {
-        line-height: 200%
+        line-height: 200%;
       }
 
       #schedule th.time {
-        width: 200px
+        width: 200px;
       }
 
       footer {
         /*background-color: #131022;*/
-/*         background-image: url(../assets/img/backgrounds/footer-bg.jpg); */
+        /*         background-image: url(../assets/img/backgrounds/footer-bg.jpg); */
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -151,8 +168,8 @@
         right: 0;
         bottom: 0;
         left: 0;
-        content: '';
-        background-color: rgba(31, 39, 73, .97);
+        content: "";
+        background-color: rgba(31, 39, 73, 0.97);
       }
 
       @media only screen and (max-width: 767px) {
@@ -164,12 +181,12 @@
 
     <!-- Theme mode -->
     <script>
-      let mode = window.localStorage.getItem('mode'),
-          root = document.getElementsByTagName('html')[0];
-      if (mode !== undefined && mode === 'dark') {
-        root.classList.add('dark-mode');
+      let mode = window.localStorage.getItem("mode"),
+        root = document.getElementsByTagName("html")[0];
+      if (mode !== undefined && mode === "dark") {
+        root.classList.add("dark-mode");
       } else {
-        root.classList.remove('dark-mode');
+        root.classList.remove("dark-mode");
       }
     </script>
 
@@ -177,85 +194,205 @@
     <script>
       (function () {
         window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
           setTimeout(function () {
             preloader.remove();
           }, 1000);
         };
       })();
     </script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+    ></script>
   </head>
-
 
   <!-- Body -->
   <body>
-
     <!-- Page loading spinner -->
     <div class="page-loading active">
       <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Loading...</span>
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
       </div>
     </div>
-    
 
-                    <main class="page-wrapper">
-            <section class="jarallax dark-mode bg-dark py-xxl-5" data-jarallax data-speed="0.4">
-                <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-dark-translucent"></span>
-                <div class="jarallax-img" style="background-image: url(./data/bg.jpg);"></div>
-                <div class="position-relative text-center zindex-5 ">
-
-
-
-          <p style="font-size:65px; color:rgb(255, 255, 255); font-weight: 65" align="center"><b>Foundation Models for 3D Humans</b></p>
-           <p style="font-size:50px; color:rgb(255, 255, 255); font-weight: 50" align="center">ECCV 2024 Workshop</p><br>
+    <main class="page-wrapper">
+      <section
+        class="jarallax dark-mode bg-dark py-xxl-5"
+        data-jarallax
+        data-speed="0.4"
+      >
+        <span
+          class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-dark-translucent"
+        ></span>
+        <div
+          class="jarallax-img"
+          style="background-image: url(./data/bg.jpg)"
+        ></div>
+        <div class="position-relative text-center zindex-5">
+          <p
+            style="font-size: 65px; color: rgb(255, 255, 255); font-weight: 65"
+            align="center"
+          >
+            <b>Foundation Models for 3D Humans</b>
+          </p>
+          <p
+            style="font-size: 50px; color: rgb(255, 255, 255); font-weight: 50"
+            align="center"
+          >
+            ECCV 2024 Workshop
+          </p>
+          <br />
           <p class="fs-4 text-light opacity-70 pb-2 mb-lg-5">
-                          <span style="font-size:1.3rem"> <i class="fa fa-calendar" style="color:#f029cf"></i> September, 2024  &nbsp; &nbsp; &nbsp;
-                            <i class="fa fa-map-marker" style="color:#f029cf"></i> Mico Milano, Italy </span>
-                        </p>
-          
+            <span style="font-size: 1.3rem">
+              <i class="fa fa-calendar" style="color: #f029cf"></i> September,
+              2024 &nbsp; &nbsp; &nbsp;
+              <i class="fa fa-map-marker" style="color: #f029cf"></i> Mico
+              Milano, Italy
+            </span>
+          </p>
         </div>
       </section>
       <!-- tracks -->
       <section id="tracks" class="container py-5">
-<!--         <div class="row pt-4 pb-3">
+        <!--         <div class="row pt-4 pb-3">
           <h2 class="text-center text-sm-start pb-2 pb-lg-0">Challenge Tracks</h2>
         </div> -->
         <div class="row">
-	  <div class="row pt-4 pb-3">
+          <div class="row pt-4 pb-3">
             <h2 class="text-center text-sm-start pb-2 pb-lg-0">Overview</h2>
           </div>
           <!-- Item -->
-<!--           <h3>Overview</h3> -->
+          <!--           <h3>Overview</h3> -->
           <div class="col">
             <p align="justify">
-              Foundation models (e.g., large language models (LLMs), large vision models, text-to-image generative models) are impacting nearly every area of computer vision and represent a 
-              paradigm shift from end-to-end learning of task-specific models to pretraining-finetuninng generalist models.
-              Such a paradigm shift urgently calls for rethinking the new challenges and opportunities in the study of digital humans. This workshop is particularly focused on exploring two key questions: (1) how foundation models can help the study of digital humans; (2) how we can build foundation models for digital humans.
-              
-              The study of digital humans encompasses a wide breadth of research areas, from high-fidelity digital avatar modeling and lifelike human motion generation to human animation and behavior analysis. This workshop offers an in-depth exploration of the vibrant intersection between 3D digital human modeling and foundation models. We plan to bring experts in general foundation models and experts in 3D digital humans together to exchange ideas and discuss open challenges. 
+              Foundation models (e.g., large language models (LLMs), large
+              vision models, text-to-image generative models) are impacting
+              nearly every area of computer vision and represent a paradigm
+              shift from end-to-end learning of task-specific models to
+              pretraining-finetuninng generalist models. Such a paradigm shift
+              urgently calls for rethinking the new challenges and opportunities
+              in the study of digital humans. This workshop is particularly
+              focused on exploring two key questions: (1) how foundation models
+              can help the study of digital humans; (2) how we can build
+              foundation models for digital humans. The study of digital humans
+              encompasses a wide breadth of research areas, from high-fidelity
+              digital avatar modeling and lifelike human motion generation to
+              human animation and behavior analysis. This workshop offers an
+              in-depth exploration of the vibrant intersection between 3D
+              digital human modeling and foundation models. We plan to bring
+              experts in general foundation models and experts in 3D digital
+              humans together to exchange ideas and discuss open challenges.
             </p>
-		  
-            <div style="text-align: center;">
-		<img src="./data/0_teaser.jpg" width="1200">
-    <p align="middle" > (to be updated)  </p> 
-	    </div>
+
+            <div style="text-align: center">
+              <img src="./data/0_teaser.jpg" width="1200" />
+              <p align="middle">(to be updated)</p>
+            </div>
           </div>
-
-
         </div>
       </section>
-	    
-	    
+
       <!-- Speakers -->
       <section id="speakers" class="container py-5">
         <div class="row pt-4 pb-3">
-          <h2 class="text-center text-sm-start pb-2 pb-lg-0">Invited Speakers</h2>
-          <p>--TBD--</p>
+          <h2 class="text-center text-sm-start pb-2 pb-lg-0">
+            Invited Speakers
+          </h2>
+
+          <div class="col-md-3 py-3">
+            <div
+              class="card card-body card-hover bg-light border-0 text-center mx-2"
+            >
+              <img
+                src="./data/black.jpeg"
+                class="d-block rounded-circle mx-auto mb-3"
+                width="162"
+                alt="Michael J. Black"
+              />
+              <h5 class="fw-medium fs-lg mb-1">
+                <a
+                  style="text-decoration: none"
+                  href="https://ps.is.mpg.de/person/black"
+                  target="_blank"
+                  >Michael J. Black</a
+                >
+              </h5>
+              <p class="fs-sm mb-3">MPI-IS & Meshcapade</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 py-3">
+            <div
+              class="card card-body card-hover bg-light border-0 text-center mx-2"
+            >
+              <img
+                src="./data/malik.jpeg"
+                class="d-block rounded-circle mx-auto mb-3"
+                width="162"
+                alt="Jitendra Malik"
+              />
+              <h5 class="fw-medium fs-lg mb-1">
+                <a
+                  style="text-decoration: none"
+                  href="https://people.eecs.berkeley.edu/~malik/"
+                  target="_blank"
+                  >Jitendra Malik</a
+                >
+              </h5>
+              <p class="fs-sm mb-3">UC Berkeley</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 py-3">
+            <div
+              class="card card-body card-hover bg-light border-0 text-center mx-2"
+            >
+              <img
+                src="./data/siyu.jpeg"
+                class="d-block rounded-circle mx-auto mb-3"
+                width="162"
+                alt="Siyu Tang"
+              />
+              <h5 class="fw-medium fs-lg mb-1">
+                <a
+                  style="text-decoration: none"
+                  href="https://vlg.inf.ethz.ch/"
+                  target="_blank"
+                  >Siyu Tang</a
+                >
+              </h5>
+              <p class="fs-sm mb-3">ETH Zurich</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 py-3">
+            <div
+              class="card card-body card-hover bg-light border-0 text-center mx-2"
+            >
+              <img
+                src="./data/yu.jpeg"
+                class="d-block rounded-circle mx-auto mb-3"
+                width="162"
+                alt="Jingyi Yu"
+              />
+              <h5 class="fw-medium fs-lg mb-1">
+                <a
+                  style="text-decoration: none"
+                  href="http://www.yu-jingyi.com/"
+                  target="_blank"
+                  >Jingyi Yu</a
+                >
+              </h5>
+              <p class="fs-sm mb-3">ShanghaiTech</p>
+            </div>
+          </div>
         </div>
-        <div class="row justify-content-center">
-<!-- 
+        <div class="row justify-content-center"></div>
+      </section>
+      <!-- 
       <div class="col-md-3 py-3">
                <div class="card card-body card-hover bg-light border-0 text-center mx-2">
                  <img src="./data/michael.jpg" class="d-block rounded-circle mx-auto mb-3" width="162">
@@ -274,16 +411,19 @@
               </div> -->
 
       <section id="submission" class="container py-5">
-          <div class="row pt-4 pb-3">
-            <h2 class="text-center text-sm-start pb-2 pb-lg-0">Call for Posters and Demos</h2>
-          </div>
-          <div class="row">
-            <div class="col">
-		    <ul style="font-size:15px;">
-			    <!-- <b>Submission site:</b> <a href="https://cmt3.research.microsoft.com/GCV2024">https://cmt3.research.microsoft.com/GCV2024</a><br> -->
-			    <b>Submission site:</b> <p> TBD </p>
-			    <!-- <b>Author kit:</b> <a href="https://github.com/cvpr-org/author-kit/archive/refs/tags/CVPR2024-v2.zip">CVPR Author KIT</a>.<br> -->
-			    <!-- We invite submissions of both <b>short and long papers</b> (4 pages and 8 pages respectively excluding references). The long papers will be included in the proceedings of CVPR. Potential topics include but are not limited to:
+        <div class="row pt-4 pb-3">
+          <h2 class="text-center text-sm-start pb-2 pb-lg-0">
+            Call for Posters and Demos
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col">
+            <!-- <ul style="font-size:15px;"> -->
+            <!-- <b>Submission site:</b> <a href="https://cmt3.research.microsoft.com/GCV2024">https://cmt3.research.microsoft.com/GCV2024</a><br> -->
+            <b>Submission site:</b>
+            <p>TBD</p>
+            <!-- <b>Author kit:</b> <a href="https://github.com/cvpr-org/author-kit/archive/refs/tags/CVPR2024-v2.zip">CVPR Author KIT</a>.<br> -->
+            <!-- We invite submissions of both <b>short and long papers</b> (4 pages and 8 pages respectively excluding references). The long papers will be included in the proceedings of CVPR. Potential topics include but are not limited to:
                         <br>
 
                         <li style="margin-left:30px">
@@ -315,26 +455,31 @@
                         </li>
                 </ul> -->
 
-                <br>
-              </div>
+            <br />
+          </div>
         </div>
 
-<!--        </div>-->
+        <!-- </div> -->
       </section>
 
-
-
-            <section id="dates" class="container py-5">
+      <section id="dates" class="container py-5">
         <div class="row pt-4 pb-3">
           <div class="col-12">
-            <h2 class="text-center text-sm-start pb-2 pb-lg-0 mb-4 mb-lg-5">Important Dates</h2>
+            <h2 class="text-center text-sm-start pb-2 pb-lg-0 mb-4 mb-lg-5">
+              Important Dates
+            </h2>
           </div>
 
           <div class="col-lg-9 offset-lg-1">
             <!-- Tab panes -->
             <div class="tab-content">
               <!-- Workshop -->
-              <div class="tab-pane fade show active" id="workshop" role="tabpanel" aria-labelledby="workshop-tab">
+              <div
+                class="tab-pane fade show active"
+                id="workshop"
+                role="tabpanel"
+                aria-labelledby="workshop-tab"
+              >
                 <div class="table-responsive">
                   <table class="table">
                     <thead>
@@ -356,86 +501,249 @@
                   </table>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
       </section>
 
-
       <section id="schedule" class="container py-5">
-          <div class="row pt-4 pb-3">
-            <h2 class="text-center text-sm-start pb-2 pb-lg-0">Schedule</h2>
-          </div>
-          <p>--TBD--</p>
+        <div class="row pt-4 pb-3">
+          <h2 class="text-center text-sm-start pb-2 pb-lg-0">Schedule</h2>
+        </div>
+        <p>--TBD--</p>
       </section>
-
-
-
-     
 
       <!-- Organizers -->
       <section id="organizers" class="container py-5">
-	      
         <div class="container">
           <div class="row pt-4 pb-3">
             <h2 class="text-center text-sm-start pb-2 pb-lg-0">Organizers</h2>
           </div>
-		
+
           <div class="row justify-content-center">
-
-              <div class="col-md-3 py-3">
-                <div class="card card-body card-hover bg-light border-0 text-center mx-2">
-                  <img src="./data/yao.jpg" class="d-block rounded-circle mx-auto mb-3" width="162" alt="Yao Feng">
-                  <h5 class="fw-medium fs-lg mb-1"><a style="text-decoration:none" href="https://is.mpg.de/person/yfeng" target="_blank">Yao Feng</a></h5>
-                  <p class="fs-sm mb-3">Meshcapade & MPIIS & ETH Zurich</p>
-                </div>
+            <div class="col-md-3 py-3">
+              <div
+                class="card card-body card-hover bg-light border-0 text-center mx-2"
+              >
+                <img
+                  src="./data/yao.jpg"
+                  class="d-block rounded-circle mx-auto mb-3"
+                  width="162"
+                  alt="Yao Feng"
+                />
+                <h5 class="fw-medium fs-lg mb-1">
+                  <a
+                    style="text-decoration: none"
+                    href="https://is.mpg.de/person/yfeng"
+                    target="_blank"
+                    >Yao Feng</a
+                  >
+                </h5>
+                <p class="fs-sm mb-3">Meshcapade & MPI-IS & ETH Zurich</p>
               </div>
+            </div>
 
-
-              <div class="col-md-3 py-3">
-                <div class="card card-body card-hover bg-light border-0 text-center mx-2">
-                  <img src="./data/yan.jpg" class="d-block rounded-circle mx-auto mb-3" width="162" alt="Yan Zhang">
-                  <h5 class="fw-medium fs-lg mb-1"><a style="text-decoration:none" href="https://yz-cnsdqz.github.io/" target="_blank">Yan Zhang</a></h5>
-                  <p class="fs-sm mb-3">Meshcapade</p>
-                </div>
+            <div class="col-md-3 py-3">
+              <div
+                class="card card-body card-hover bg-light border-0 text-center mx-2"
+              >
+                <img
+                  src="./data/yan.jpg"
+                  class="d-block rounded-circle mx-auto mb-3"
+                  width="162"
+                  alt="Yan Zhang"
+                />
+                <h5 class="fw-medium fs-lg mb-1">
+                  <a
+                    style="text-decoration: none"
+                    href="https://yz-cnsdqz.github.io/"
+                    target="_blank"
+                    >Yan Zhang</a
+                  >
+                </h5>
+                <p class="fs-sm mb-3">Meshcapade</p>
               </div>
+            </div>
 
+            <div class="col-md-3 py-3">
+              <div
+                class="card card-body card-hover bg-light border-0 text-center mx-2"
+              >
+                <img
+                  src="./data/yuliang_head.JPG"
+                  class="d-block rounded-circle mx-auto mb-3"
+                  width="162"
+                  alt="Yuliang Xiu"
+                />
+                <h5 class="fw-medium fs-lg mb-1">
+                  <a
+                    style="text-decoration: none"
+                    href="https://xiuyuliang.cn/"
+                    target="_blank"
+                    >Yuliang Xiu</a
+                  >
+                </h5>
+                <p class="fs-sm mb-3">MPI-IS</p>
+              </div>
+            </div>
 
+            <div class="col-md-3 py-3">
+              <div
+                class="card card-body card-hover bg-light border-0 text-center mx-2"
+              >
+                <img
+                  src="./data/weiyang.jpeg"
+                  class="d-block rounded-circle mx-auto mb-3"
+                  width="162"
+                  alt="Yuliang Xiu"
+                />
+                <h5 class="fw-medium fs-lg mb-1">
+                  <a
+                    style="text-decoration: none"
+                    href="https://wyliu.com/"
+                    target="_blank"
+                    >Weiyang Liu</a
+                  >
+                </h5>
+                <p class="fs-sm mb-3">MPI-IS & Cambridge</p>
+              </div>
+            </div>
 
+            <div class="col-md-3 py-3">
+              <div
+                class="card card-body card-hover bg-light border-0 text-center mx-2"
+              >
+                <img
+                  src="./data/naureen.jpeg"
+                  class="d-block rounded-circle mx-auto mb-3"
+                  width="162"
+                  alt="Naureen Mahmood"
+                />
+                <h5 class="fw-medium fs-lg mb-1">
+                  <a
+                    style="text-decoration: none"
+                    href="https://www.linkedin.com/in/naureenm/"
+                    target="_blank"
+                    >Naureen Mahmood</a
+                  >
+                </h5>
+                <p class="fs-sm mb-3">Meshcapade</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 py-3">
+              <div
+                class="card card-body card-hover bg-light border-0 text-center mx-2"
+              >
+                <img
+                  src="./data/wrafael.jpg"
+                  class="d-block rounded-circle mx-auto mb-3"
+                  width="162"
+                  alt="Rafael Wampfler"
+                />
+                <h5 class="fw-medium fs-lg mb-1">
+                  <a
+                    style="text-decoration: none"
+                    href="https://inf.ethz.ch/people/person-detail.MTQ3NTA3.TGlzdC8zMDQsLTg3NDc3NjI0MQ==.html"
+                    target="_blank"
+                    >Rafael Wampfler</a
+                  >
+                </h5>
+                <p class="fs-sm mb-3">ETH Zurich</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 py-3">
+              <div
+                class="card card-body card-hover bg-light border-0 text-center mx-2"
+              >
+                <img
+                  src="./data/georgios.jpeg"
+                  class="d-block rounded-circle mx-auto mb-3"
+                  width="162"
+                  alt="Georgios Pavlakos"
+                />
+                <h5 class="fw-medium fs-lg mb-1">
+                  <a
+                    style="text-decoration: none"
+                    href="https://geopavlakos.github.io/"
+                    target="_blank"
+                    >Georgios Pavlakos</a
+                  >
+                </h5>
+                <p class="fs-sm mb-3">UT Austin</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 py-3">
+              <div
+                class="card card-body card-hover bg-light border-0 text-center mx-2"
+              >
+                <img
+                  src="./data/gul.jpg"
+                  class="d-block rounded-circle mx-auto mb-3"
+                  width="162"
+                  alt="Gül Varol"
+                />
+                <h5 class="fw-medium fs-lg mb-1">
+                  <a
+                    style="text-decoration: none"
+                    href="https://imagine.enpc.fr/~varolg/"
+                    target="_blank"
+                    >Gül Varol</a
+                  >
+                </h5>
+                <p class="fs-sm mb-3">Imagine-ENPC</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 py-3">
+              <div
+                class="card card-body card-hover bg-light border-0 text-center mx-2"
+              >
+                <img
+                  src="./data/black.jpeg"
+                  class="d-block rounded-circle mx-auto mb-3"
+                  width="162"
+                  alt="Michael J. Black"
+                />
+                <h5 class="fw-medium fs-lg mb-1">
+                  <a
+                    style="text-decoration: none"
+                    href="https://ps.is.mpg.de/person/black"
+                    target="_blank"
+                    >Michael J. Black</a
+                  >
+                </h5>
+                <p class="fs-sm mb-3">MPI-IS & Meshcapade</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-	    
-	    
 
+      <br />
+      <br />
+      <br />
+      <!--      <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=84848c&w=400&t=tt&d=2JHVvnU97UBcQG0xYLAvglePjkssjDLpbeRhZQhM_1s&co=a1cded&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script>-->
+      <script
+        type="text/javascript"
+        id="clustrmaps"
+        src="//cdn.clustrmaps.com/map_v2.js?cl=474747&w=386&t=n&d=_KRcvWlAZADIQTJh5QCVWaDrwAtwPMAffAZq-yBjTao&co=85bde5"
+      ></script>
+      <br />
+      <br />
+      <br />
 
+      <style>
+        .img-container {
+          text-align: center;
+          display: block;
+        }
+      </style>
 
-      <br>
-      <br>
-      <br>
-<!--      <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=84848c&w=400&t=tt&d=2JHVvnU97UBcQG0xYLAvglePjkssjDLpbeRhZQhM_1s&co=a1cded&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script>-->
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=474747&w=386&t=n&d=_KRcvWlAZADIQTJh5QCVWaDrwAtwPMAffAZq-yBjTao&co=85bde5'></script>
-      <br>
-      <br>
-      <br>
-
-
-
-
-
-    <style>
-      .img-container {
-        text-align: center;
-        display: block;
-      }
-    </style>
-
-<!--   <br> -->
-  
-
-
-  </main>
+      <!--   <br> -->
+    </main>
     <!-- Footer -->
 
     <!-- Back to top button -->
@@ -443,7 +751,6 @@
       <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
       <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
     </a>
-
 
     <!-- Vendor Scripts -->
     <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -457,12 +764,21 @@
     <!-- Main Theme Script -->
     <script src="./assets/js/theme.min.js"></script>
     <script>
-      document.addEventListener('scroll', function(e) {
+      document.addEventListener("scroll", function (e) {
         let currentOffset = window.scrollY + 80,
-            currentSection = "",
-            sections = ["tracks", "submission", "dates", "schedule", "speakers", "organizers", "awards", "previous"];
+          currentSection = "",
+          sections = [
+            "tracks",
+            "submission",
+            "dates",
+            "schedule",
+            "speakers",
+            "organizers",
+            "awards",
+            "previous",
+          ];
 
-        for (let i = 0; i < sections.length; ++ i) {
+        for (let i = 0; i < sections.length; ++i) {
           if (currentOffset < document.getElementById(sections[i]).offsetTop) {
             break;
           }
@@ -470,28 +786,27 @@
         }
 
         let navbar = document.getElementsByClassName("navbar-nav")[0],
-            navLinks = navbar.getElementsByTagName("a");
+          navLinks = navbar.getElementsByTagName("a");
 
-        for (let i = 0; i < navLinks.length; ++ i) {
+        for (let i = 0; i < navLinks.length; ++i) {
           navLinks[i].classList.remove("active");
           if (navLinks[i].getAttribute("href") == "#" + currentSection) {
             navLinks[i].classList.add("active");
           }
         }
-      })
+      });
     </script>
     <script type="text/javascript">
-      $('#schedule').on('click', '.abstract', function () {
-          var bibtexBlock = $('pre', $(this).parent().parent().parent()),
-              isVisible = bibtexBlock.is(':visible')
-            
-          if (isVisible) {
-              bibtexBlock.slideUp(36)
-          } else {
-              bibtexBlock.slideDown(36)
-          }
-      })
-      </script>
+      $("#schedule").on("click", ".abstract", function () {
+        var bibtexBlock = $("pre", $(this).parent().parent().parent()),
+          isVisible = bibtexBlock.is(":visible");
 
-    </body>
+        if (isVisible) {
+          bibtexBlock.slideUp(36);
+        } else {
+          bibtexBlock.slideDown(36);
+        }
+      });
+    </script>
+  </body>
 </html>
